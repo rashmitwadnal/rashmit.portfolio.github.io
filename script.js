@@ -39,7 +39,6 @@ function typeEffect() {
 
 typeEffect();
 
-
 // Contact Button Message
 function showMessage() {
   let msg = document.getElementById("messageText");
