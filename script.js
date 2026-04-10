@@ -40,7 +40,7 @@ function typeEffect() {
 typeEffect();
 
 
-// Upload Profile Picture
+// Upload Profile Picture (Circle Preview)
 let photoUpload = document.getElementById("photoUpload");
 let profilePic = document.getElementById("profilePic");
 
@@ -57,17 +57,29 @@ photoUpload.addEventListener("change", function () {
 });
 
 
-// Upload Certificates
+// Upload Certificates (ONLY 2 Allowed)
 let certUpload = document.getElementById("certUpload");
 let certList = document.getElementById("certList");
 
 certUpload.addEventListener("change", function () {
   certList.innerHTML = "";
 
-  Array.from(this.files).forEach((file) => {
+  if (this.files.length > 2) {
+    alert("You can upload only 2 certificates!");
+    this.value = "";
+    return;
+  }
+
+  Array.from(this.files).forEach((file, i) => {
     let div = document.createElement("div");
     div.classList.add("cert-item");
-    div.innerHTML = `<b>${file.name}</b><br><small>${(file.size / 1024).toFixed(2)} KB</small>`;
+
+    div.innerHTML = `
+      <b>Certificate ${i + 1}</b><br>
+      <small>${file.name}</small><br>
+      <small>${(file.size / 1024).toFixed(2)} KB</small>
+    `;
+
     certList.appendChild(div);
   });
 });
@@ -76,5 +88,5 @@ certUpload.addEventListener("change", function () {
 // Contact Button Message
 function showMessage() {
   let msg = document.getElementById("messageText");
-  msg.innerHTML = "✨ Thank you for visiting! Contact request sent successfully.";
+  msg.innerHTML = "✨ Thank you for contacting me! I will respond soon.";
 }
