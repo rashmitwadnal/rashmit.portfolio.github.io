@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pharmacy Student Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- Background Glow Effects -->
+  <div class="glow glow1"></div>
+  <div class="glow glow2"></div>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <h2 class="logo">Pharma<span>X</span></h2>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#certificates">Certificates</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <h1>Hello, I'm <span id="name">Your Name</span></h1>
+      <h2 class="typing" id="typingText"></h2>
+      <p>
+        A passionate 1st year Pharmacy student focused on healthcare, innovation,
+        and futuristic medical science.
+      </p>
+
+      <div class="hero-buttons">
+        <a href="#about" class="btn">Explore</a>
+        <a href="#certificates" class="btn btn-outline">Certificates</a>
+      </div>
+    </div>
+
+    <div class="hero-image">
+      <img id="profilePic" src="https://via.placeholder.com/300" alt="Profile Picture" />
+      <label class="upload-btn">
+        Upload Photo
+        <input type="file" id="photoUpload" accept="image/*" hidden />
+      </label>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="section" id="about">
+    <h2 class="section-title">About Me</h2>
+    <div class="card">
+      <p>
+        Hi! I'm a <b>1st year Pharmacy student</b> who is passionate about medicines,
+        human health, clinical knowledge, and futuristic healthcare innovation.
+        My goal is to learn advanced pharmaceutical science and contribute to society.
+      </p>
+
+      <div class="info-grid">
+        <div class="info-box">
+          <h3>🎓 Education</h3>
+          <p>1st Year B.Pharmacy Student</p>
+        </div>
+
+        <div class="info-box">
+          <h3>🧪 Interest</h3>
+          <p>Pharmacology, Drug Discovery</p>
+        </div>
+
+        <div class="info-box">
+          <h3>🌍 Goal</h3>
+          <p>Become a Professional Pharmacist</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section class="section" id="skills">
+    <h2 class="section-title">Skills</h2>
+
+    <div class="skills-grid">
+      <div class="skill-card">
+        <h3>📌 Pharmaceutical Basics</h3>
+        <p>Understanding drug composition & dosage forms.</p>
+      </div>
+
+      <div class="skill-card">
+        <h3>🧬 Human Anatomy</h3>
+        <p>Basic anatomy and physiological concepts.</p>
+      </div>
+
+      <div class="skill-card">
+        <h3>🧫 Chemistry</h3>
+        <p>Organic & inorganic chemistry knowledge.</p>
+      </div>
+
+      <div class="skill-card">
+        <h3>💻 Computer Skills</h3>
+        <p>MS Office, Internet, Basic Programming.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Certificates Section -->
+  <section class="section" id="certificates">
+    <h2 class="section-title">Certificates</h2>
+
+    <div class="upload-area">
+      <label class="upload-cert-btn">
+        Upload Certificates (PDF / Image)
+        <input type="file" id="certUpload" multiple accept=".pdf,image/*" hidden />
+      </label>
+
+      <div id="certList" class="cert-list"></div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="section" id="contact">
+    <h2 class="section-title">Contact Me</h2>
+
+    <div class="card contact-card">
+      <p><b>Email:</b> yourmail@gmail.com</p>
+      <p><b>Phone:</b> +91 00000 00000</p>
+      <p><b>College:</b> Your College Name</p>
+
+      <button class="btn" onclick="showMessage()">Send Message</button>
+      <p id="messageText"></p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>© 2026 | Designed by <span>Your Name</span> | Futuristic Portfolio</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
