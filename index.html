@@ -45,12 +45,8 @@
     </div>
 
     <div class="hero-image">
-      <img id="profilePic" src="https://via.placeholder.com/300" alt="Profile Picture" />
-
-      <label class="upload-btn">
-        Upload Photo
-        <input type="file" id="photoUpload" accept="image/*" hidden />
-      </label>
+      <img src="profile.jpg" alt="Rashmit Wadnal Photo" />
+      <p class="photo-text">Rashmit Wadnal</p>
     </div>
   </section>
 
@@ -116,17 +112,20 @@
   <section class="section" id="certificates">
     <h2 class="section-title">My Certificates</h2>
 
-    <div class="upload-area">
-      <p class="note">
-        Upload only <b>2 certificates</b> (PDF or Image).
-      </p>
+    <div class="cert-list">
 
-      <label class="upload-cert-btn">
-        Upload Certificates
-        <input type="file" id="certUpload" multiple accept=".pdf,image/*" hidden />
-      </label>
+      <div class="cert-item">
+        <h3>Certificate 1</h3>
+        <p>Click below to view/download</p>
+        <a href="certificate1.pdf" target="_blank" class="cert-link">View Certificate</a>
+      </div>
 
-      <div id="certList" class="cert-list"></div>
+      <div class="cert-item">
+        <h3>Certificate 2</h3>
+        <p>Click below to view/download</p>
+        <a href="certificate2.pdf" target="_blank" class="cert-link">View Certificate</a>
+      </div>
+
     </div>
   </section>
 
