@@ -40,51 +40,6 @@ function typeEffect() {
 typeEffect();
 
 
-// Upload Profile Picture (Circle Preview)
-let photoUpload = document.getElementById("photoUpload");
-let profilePic = document.getElementById("profilePic");
-
-photoUpload.addEventListener("change", function () {
-  let file = this.files[0];
-
-  if (file) {
-    let reader = new FileReader();
-    reader.onload = function (e) {
-      profilePic.src = e.target.result;
-    };
-    reader.readAsDataURL(file);
-  }
-});
-
-
-// Upload Certificates (ONLY 2 Allowed)
-let certUpload = document.getElementById("certUpload");
-let certList = document.getElementById("certList");
-
-certUpload.addEventListener("change", function () {
-  certList.innerHTML = "";
-
-  if (this.files.length > 2) {
-    alert("You can upload only 2 certificates!");
-    this.value = "";
-    return;
-  }
-
-  Array.from(this.files).forEach((file, i) => {
-    let div = document.createElement("div");
-    div.classList.add("cert-item");
-
-    div.innerHTML = `
-      <b>Certificate ${i + 1}</b><br>
-      <small>${file.name}</small><br>
-      <small>${(file.size / 1024).toFixed(2)} KB</small>
-    `;
-
-    certList.appendChild(div);
-  });
-});
-
-
 // Contact Button Message
 function showMessage() {
   let msg = document.getElementById("messageText");
